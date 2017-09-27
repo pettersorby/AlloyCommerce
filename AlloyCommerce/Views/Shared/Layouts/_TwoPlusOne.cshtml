@@ -1,5 +1,8 @@
 @using AlloyCommerce
-@model IPageViewModel<SitePageData>
+@using AlloyCommerce.Business.Rendering
+
+@model IPageViewModel<ISiteContent>
+
 @{ Layout = "~/Views/Shared/Layouts/_Root.cshtml"; }
 
 @{Html.RenderPartial("Breadcrumbs");}

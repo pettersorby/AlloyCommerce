@@ -2,6 +2,7 @@ using System.Web.Mvc;
 using AlloyCommerce.Models.Pages;
 using AlloyCommerce.Models.ViewModels;
 using EPiServer.Web.Routing;
+using AlloyCommerce.Business.Rendering;
 
 namespace AlloyCommerce.Business
 {
@@ -26,7 +27,7 @@ namespace AlloyCommerce.Business
         {
             var viewModel = filterContext.Controller.ViewData.Model;
 
-            var model = viewModel as IPageViewModel<SitePageData>;
+            var model = viewModel as IPageViewModel<ISiteContent>;
             if (model != null)
             {
                 var currentContentLink = filterContext.RequestContext.GetContentLink();

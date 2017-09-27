@@ -11,7 +11,7 @@ namespace AlloyCommerce.Models.Pages
     /// <summary>
     /// Base class for all page types
     /// </summary>
-    public abstract class SitePageData : PageData, ICustomCssInContentArea
+    public abstract class SitePageData : PageData, ICustomCssInContentArea, ISiteContent
     {
         [Display(
             GroupName = Global.GroupNames.MetaData,

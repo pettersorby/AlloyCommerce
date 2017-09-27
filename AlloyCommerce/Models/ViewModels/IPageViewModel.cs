@@ -1,5 +1,6 @@
 using EPiServer.Core;
 using AlloyCommerce.Models.Pages;
+using AlloyCommerce.Business.Rendering;
 
 namespace AlloyCommerce.Models.ViewModels
 {
@@ -10,7 +11,7 @@ namespace AlloyCommerce.Models.ViewModels
     /// Views which should handle several page types (T) can use this interface as model type rather than the
     /// concrete PageViewModel class, utilizing the that this interface is covariant.
     /// </remarks>
-    public interface IPageViewModel<out T> where T : SitePageData
+    public interface IPageViewModel<out T> where T : ISiteContent
     {
         T CurrentPage { get; }
         LayoutModel Layout { get; set; }

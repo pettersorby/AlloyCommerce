@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EPiServer.Core;
+using System.Globalization;
 
 namespace AlloyCommerce.Business.Rendering
 {
-    interface ISiteContent
+    public interface ISiteContent
     {
+        ContentReference ContentLink { get; set; }
+        CultureInfo Language { get; set; }
+        string LanguageBranch { get; }
+        string MetaTitle { get; set; }
+        string MetaDescription { get; set; }
     }
 }

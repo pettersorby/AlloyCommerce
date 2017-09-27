@@ -1,7 +1,8 @@
-@using System.Web.Optimization
+﻿@using System.Web.Optimization
 @using EPiServer.Framework.Web.Mvc.Html
 @using AlloyCommerce.Business
-@model IPageViewModel<SitePageData>
+@using AlloyCommerce.Business.Rendering
+@model IPageViewModel<ISiteContent>
 <!DOCTYPE html>
 <html lang="@Model.CurrentPage.LanguageBranch">
     <head>
